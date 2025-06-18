@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Brain Buzz Quiz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Brain Buzz</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="index.html">Quiz</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+  </nav>
+
+  <!-- Sections -->
+  <section id="home" data-aos="fade-up">
+    <h1>Welcome to Brain Buzz!</h1>
+    <p>Your ultimate destination to test and improve your knowledge.</p>
+    <a href="#quiz" class="start-btn">Start Now</a>
+  </section>
+
+  <section id="quiz" data-aos="fade-right">
+    <h1>Take a Quiz</h1>
+    <p>Answer fun and challenging questions to boost your brain power!</p>
+    <ul>
+      <li>📘 General Knowledge</li>
+      <li>💡 Science & Tech</li>
+      <li>🎬 Entertainment</li>
+    </ul>
+    <a href="index.html" class="start-btn">Begin Quiz</a>
+
+  </section>
+
+  <section id="about" data-aos="zoom-in">
+    <h1>About Us</h1>
+    <p>Brain Buzz is an interactive quiz platform built to make learning fun and effective. We help learners of all ages improve their knowledge across various domains.</p>
+  </section>
+
+  <section id="contact" data-aos="fade-up">
+    <h1>Contact Us</h1>
+    <form class="contact-form" onsubmit="alert('Thanks for contacting us!'); return false;">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Brain Buzz Quiz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🧠 Brain Buzz</h1>
+      <p class="subtitle">Test your knowledge with fun questions!</p>
+      <button id="theme-toggle">🌙 Dark Mode</button>
+    </header>
+
+    <main id="quiz-box">
+      <div class="quiz-header">
+        <div id="progress">Question 1 of 5</div>
+        <div id="timer">⏱️ Time Left: <span id="time-left">10</span>s</div>
+        <div id="progress-bar">
+            <div id="progress-fill"></div>
+        </div>
+
+        <div id="question">Loading question...</div>
+      </div>
+
+      <div id="answer-buttons" class="btn-grid"></div>
+
+      <button id="next-btn" class="btn next-btn">Next</button>
+
+      <div id="result-box" class="hidden">
+        <h2>Your Score</h2>
+       <p id="final-score"></p>
+      <div id="level-badge"></div>
+
+        <canvas id="scoreChart" width="400" height="250"></canvas>
+
+
+        <button class="btn" onclick="startQuiz()">Play Again</button>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Brain Buzz. Made by Javeed Akthar</p>
+    </footer>
+  </div>
+
+  <!-- Sound Effects -->
+  <audio id="correct-sound" src="assets/correct.mp3"></audio>
+  <audio id="wrong-sound" src="assets/wrong.mp3"></audio>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>
